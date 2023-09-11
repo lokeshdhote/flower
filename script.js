@@ -155,13 +155,31 @@ scrollTrigger:{
   // markers:true,
 }
 })
-gsap.from("#footer",{
-  opacity:0,
-  scrollTrigger:{
-    scroller:"#main",
-    trigger:"#footer",
-    start:"top 70%",
-    end:"top 50%",
-    // markers:true,
-  }
-})
+function footer(){
+  var foot =gsap.timeline({
+    scrollTrigger:{
+      trigger:"#one",
+      scroller:"#main",
+      start:"top 70%",
+      end:"top 70%",
+      scrub:3,
+      pin:true,
+      // markers:true,
+    }
+  })
+   foot
+  .from("#one h1",{
+    y:-100,
+    opacity:1,
+  
+   })
+   .from("#footer p",{
+    opacity:0,
+    // delay:0.3,
+    onStart: function(){
+      $('#footer p').textillate({ in: { effect: 'fadeIn' }}); 
+    }
+  
+   })
+}
+footer()
