@@ -32,7 +32,7 @@ loco()
  
 var tl = gsap.timeline ()
 tl
-.from("#nav h1, img, #navpart2 h2",{
+.from("#nav h1, #flowerLogo, #navpart2 h2",{
   y:-100,
   duration:1,
   delay:0.2,
@@ -55,10 +55,10 @@ var tl2 =gsap.timeline({
   scroller:"#main",
   trigger:"#page2",
   start:"top 0%",
-  end:"top -120%",
+  end:"top -130%",
   // markers:true,
   pin:true,
-  scrub:2,
+  scrub:4,
   }
 })
 tl2
@@ -144,13 +144,13 @@ speedText()
 gsap.to("#page3 #para h3 span",{
 
 color:"#000",
-stagger:1.5,
+stagger:1,
 scrollTrigger:{
   trigger:"#page3",
   scroller:"#main",
   start:"top 0%",
-  end:"top -100%",
-  scrub:3,
+  end:"top -150%",
+  scrub:5,
   pin:true,
   // markers:true,
 }
@@ -167,10 +167,10 @@ function footer(){
       // markers:true,
     }
   })
-   foot
-  .from("#one h1",{
+foot
+.from("#one h1",{
     y:-100,
-    opacity:1,
+    opacity:0,
   
    })
    .from("#footer p",{

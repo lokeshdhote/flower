@@ -200,8 +200,11 @@ justify-content: flex-start;
  position: absolute;
  opacity: 0;
 }
+
+
+
 #footer{
-opacity: 1;
+
   width: 100%;
   height: 50vh;
   background-color: #D4D89A;
@@ -217,7 +220,7 @@ padding: 0vw 10vw;
 }
 #one{
 
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   align-items: center;
 justify-content: center;
@@ -241,6 +244,7 @@ text-transform: uppercase;
 
 }
 #two h3{
+  cursor: pointer;
 font-weight: 300;
 font-family: gilroy;
 word-spacing:0.1vw;
